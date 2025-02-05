@@ -32,7 +32,7 @@ namespace Calculator2
             txtKetQua = new TextBox() { Top = 100, Left = 180, Width = 150, ReadOnly = true };
 
             btnCong = new Button() { Text = "Cộng", Top = 140, Left = 300, Width = 150, Height = 50 };
-            btnCong.Click += BtnCong_Click;
+            btnCong.Click += btnCong_Click;
 
             
 
@@ -46,9 +46,15 @@ namespace Calculator2
             
         }
 
-        
+        private void btnCong_Click(object sender, EventArgs e)
+        {
+            double a = double.Parse(txtA.Text);
+            double b = double.Parse(txtB.Text);
+            double c = a + b;        
+            txtKetQua.Text = c.ToString();
+        }
 
-        
+
 
 
     }
